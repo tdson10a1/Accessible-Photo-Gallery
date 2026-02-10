@@ -3,41 +3,56 @@ body {
     text-align: center;
 }
 
-/* KHUNG ẢNH LỚN */
+/* Khung hiển thị ảnh lớn */
 #image {
-    width: 70%;
-    height: 420px;
+    width: 700px;
+    height: 450px;
     margin: 20px auto;
-    border: 3px solid black;
-    background-color: #eee;
+    border: 2px solid black;
+
+    /* CĂN ẢNH CHUẨN */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+
+    /* Text alt */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-/* GALLERY ẢNH NHỎ */
+/* Gallery ảnh nhỏ */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 70%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
 }
 
-/* ẢNH NHỎ */
-.gallery img {
-    width: 100%;
-    height: 160px;   /* TO HƠN */
+/* Mỗi figure có cùng kích thước */
+figure {
+    width: 130px;
+    height: 130px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ảnh nhỏ to hơn và đều */
+figure img {
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border: 2px solid #444;
     cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
 }
 
-.gallery img:focus {
-    outline: 3px solid blue;
+/* Hiệu ứng nhẹ khi hover/focus (không bắt buộc nhưng đẹp) */
+figure img:hover,
+figure:focus img {
+    transform: scale(1.05);
 }
- 
