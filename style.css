@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#image {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid #000;
+    background-size: cover;
+    background-position: center;
+    line-height: 400px;
+    font-size: 24px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+figure img {
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
