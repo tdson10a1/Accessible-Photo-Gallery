@@ -3,12 +3,7 @@ body {
     text-align: center;
 }
 
-/* Tiêu đề */
-h1 {
-    margin-top: 20px;
-}
-
-/* Khung ảnh lớn */
+/* KHUNG ẢNH LỚN */
 #image {
     width: 70%;
     height: 420px;
@@ -17,34 +12,31 @@ h1 {
     background-color: #eee;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; /* QUAN TRỌNG: ảnh vừa khung */
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
 }
 
-/* Khu vực thumbnail */
+/* GALLERY ẢNH NHỎ */
 .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 70%;
+    margin: 0 auto;
 }
 
-/* Ảnh nhỏ */
+/* ẢNH NHỎ */
 .gallery img {
-    width: 120px;      /* TO & ĐỀU */
-    height: 120px;
+    width: 100%;
+    height: 160px;   /* TO HƠN */
     object-fit: cover;
-    border-radius: 10px;
+    border: 2px solid #444;
     cursor: pointer;
-    border: 2px solid transparent;
 }
 
-/* Hover + Focus (keyboard accessibility) */
-.gallery img:hover,
 .gallery img:focus {
-    border: 2px solid black;
-    outline: none;
+    outline: 3px solid blue;
 }
