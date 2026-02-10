@@ -3,26 +3,56 @@ body {
     text-align: center;
 }
 
+/* Khung hiển thị ảnh lớn */
 #image {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 450px;
     margin: 20px auto;
     border: 2px solid black;
+
+    /* CĂN ẢNH CHUẨN */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    line-height: 400px;
+
+    /* Text alt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 22px;
+    font-weight: bold;
 }
 
+/* Gallery ảnh nhỏ */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
+    margin-top: 20px;
 }
 
+/* Mỗi figure có cùng kích thước */
+figure {
+    width: 130px;
+    height: 130px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ảnh nhỏ to hơn và đều */
 figure img {
-    width: 100px;
-    height: auto;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
     cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/* Hiệu ứng nhẹ khi hover/focus (không bắt buộc nhưng đẹp) */
+figure img:hover,
+figure:focus img {
+    transform: scale(1.05);
 }
