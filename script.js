@@ -1,19 +1,21 @@
 function upDate(previewPic) {
-    console.log("Focus or mouseover triggered");
+    console.log("Mouse over or focus event triggered");
+
     let imageDiv = document.getElementById("image");
     imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
     imageDiv.innerHTML = previewPic.alt;
 }
 
 function unDo() {
-    console.log("Blur or mouseleave triggered");
+    console.log("Mouse leave or blur event triggered");
+
     let imageDiv = document.getElementById("image");
     imageDiv.style.backgroundImage = "url('')";
     imageDiv.innerHTML = "Hover or focus on an image below";
 }
 
 function addTabIndex() {
-    console.log("Page loaded - adding tabindex");
+    console.log("Page loaded – adding tabindex");
 
     let figures = document.querySelectorAll("figure");
 
