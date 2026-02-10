@@ -1,11 +1,11 @@
 function upDate(previewPic) {
     const imageDiv = document.getElementById("image");
     imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
-    imageDiv.textContent = "";
+    imageDiv.innerHTML = "";
 }
 
 function unDo() {
     const imageDiv = document.getElementById("image");
     imageDiv.style.backgroundImage = "none";
-    imageDiv.textContent = "Hover over an image below to display here.";
+    imageDiv.innerHTML = "Hover over an image below to display here.";
 }
