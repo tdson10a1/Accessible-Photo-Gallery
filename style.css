@@ -18,7 +18,7 @@ body {
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 figure img {
